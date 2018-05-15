@@ -124,16 +124,16 @@ void ofApp::draw() {
 		for (int j = i + 1; j < this->spheres.size(); j++) {
 
 			float distance = this->spheres[i]->getPosition().distance(this->spheres[j]->getPosition());
-			if (distance < 40) {
+			if (distance < 30) {
 
-				ofSetColor(239, ofMap(distance, 0, 40, 255, 128));
+				ofSetColor(239);
 				ofDrawLine(this->spheres[i]->getPosition(), this->spheres[j]->getPosition());
 				ofDrawSphere(this->spheres[i]->getPosition(), this->spheres[i]->getRadius());
 				ofDrawSphere(this->spheres[j]->getPosition(), this->spheres[j]->getRadius());
 			}
 			else if (distance < 60) {
 
-				ofSetColor(239, ofMap(distance, 40, 60, 128, 32));
+				ofSetColor(239, ofMap(distance, 30, 60, 255, 0));
 				ofDrawLine(this->spheres[i]->getPosition(), this->spheres[j]->getPosition());
 				ofDrawSphere(this->spheres[i]->getPosition(), this->spheres[i]->getRadius());
 				ofDrawSphere(this->spheres[j]->getPosition(), this->spheres[j]->getRadius());
